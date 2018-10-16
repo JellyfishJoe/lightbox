@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: cornsilk;
+	font-family: Verdana;
+}
+
+img{
+	height: 200px;
+	width: 400px;
+}
+
+header{
+	width: 100%;
+	background-color: burlywood;
+}
+
+h1{
+	padding: 50px;
+	text-align: center;
+}
+
+section{
+	width: 75%;
+	margin: 0 auto;
+	padding: 25px;
+}
+
+/* Styles for Lighbox */
+
+#overlay{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: darkgoldenrod;
+}
+
+#lightbox{
+	position: fixed;
+}
+
+#lightbox img{
+	cursor: grab;
+}
