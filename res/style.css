@@ -49,16 +49,40 @@ section{
 
 #slide{
 	overflow: hidden;
-	width: 400px;
-	height: 200px;
+	width: 410px;
+	height: 205px;
 	border: 5px solid burlywood;
 	cursor: pointer;
-	padding: 5px;
+	padding: 0px;
 }
 
 #innerContainer{
 	height: 200px;
-	width: 1200px;
+	width: 1230px;
 	overflow: hidden;
 	position: relative;
+}
+
+#innerContainer img{
+	float: left;
+	margin: 5px 5px 5px 5px;
+}
+
+/*Crossfade*/
+
+#crossfade{
+	position: relative;
+	width: 400px;
+}
+
+#crossfade .image{
+	width: 400px;
+	height: 200px;
+}
+
+.to{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
