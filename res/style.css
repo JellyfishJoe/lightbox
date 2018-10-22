@@ -23,6 +23,12 @@ h1{
 	text-align: center;
 }
 
+h2{
+	text-align: center;
+	margin: 0 auto;
+	padding: 25px;
+}
+
 section{
 	width: 75%;
 	margin: 0 auto;
@@ -85,4 +91,25 @@ section{
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+#fadeSlide{
+	position: relative;
+	width: 400px;
+}
+
+#fadeSlide img{
+	display: none;
+}
+
+#fadeSlide .show{
+	display: block;
+}
+
+#zIndex{
+	width: 400px;
+}
+
+#zIndex img{
+	position: absolute;
 }

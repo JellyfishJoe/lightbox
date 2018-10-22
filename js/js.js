@@ -43,6 +43,33 @@ $(document).ready(() => {
 	}, function(){
 		$(this).find('img:eq(1)').fadeOut();
 	})
+
+	//Crossfade Slideshow
+	const slideFade = () => {
+		var current =  $('#fadeSlide .show');
+		var next = current.next().length ? current.next() : current.siblings().first();
+
+		current.hide().removeClass('show');
+		next.fadeIn(300).addClass('show');
+
+		setTimeout(slideFade, 2000);
+	};
+
+	slideFade();
+
+	const flipPics = () => {
+		var numImg = $('#zIndex img').length;
+		var currentImg = currentImg % numImg;
+		$('#zIndex img').eq(currentImg).fadeOut(function(){
+			$('#zIndex img').each(function(){
+				$(this).css({
+					'zIndex': ((numIng - i) + currentImg) % numImg;
+				});
+			});
+		});
+	}
+
+
 });
 
 const placeImg = () => {
