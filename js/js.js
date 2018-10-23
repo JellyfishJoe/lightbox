@@ -50,26 +50,30 @@ $(document).ready(() => {
 		var next = current.next().length ? current.next() : current.siblings().first();
 
 		current.hide().removeClass('show');
-		next.fadeIn(300).addClass('show');
+		next.fadeIn().addClass('show');
 
 		setTimeout(slideFade, 2000);
 	};
 
 	slideFade();
 
-	const flipPics = () => {
+	const flipPics = (currentImg) => {
 		var numImg = $('#zIndex img').length;
 		var currentImg = currentImg % numImg;
 		$('#zIndex img').eq(currentImg).fadeOut(function(){
-			$('#zIndex img').each(function(){
+			$('#zIndex img').each(function(i){
 				$(this).css({
-					'zIndex': ((numIng - i) + currentImg) % numImg;
+					'zIndex': ((numImg - i) + currentImg) % numImg
 				});
 			});
+			$(this).show();
+			setTimeout(function(){
+				flipPics(++currentImg);
+			}, 2000);
 		});
 	}
 
-
+	flipPics(0);
 });
 
 const placeImg = () => {
@@ -87,7 +91,7 @@ const remove = () => {
 	$('#overlay, #lightbox').fadeOut('slow', function(){
 		$(this).remove();
 		$('body').css({
-			'overflow-y': 'auto' 
+			'overflow-y': 'auto', 
 		});
 	});
 
